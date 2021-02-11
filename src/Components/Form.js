@@ -84,7 +84,7 @@ function Form() {
     const years = "years"
 
     const age = moment().diff(moment(dob, format), years, true)
-    if (dob <= 18 || age > moment) {
+    if (dob <= 18) {
       setAge(0)
     } else {
       setAge(age)
@@ -201,7 +201,7 @@ function Form() {
 
         {step === 4 && (
           <FormStep>
-            <h1>Signup Completed</h1>
+            <h1>Account Created</h1>
             <Tick />
           </FormStep>
         )}
